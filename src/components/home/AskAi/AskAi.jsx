@@ -6,7 +6,7 @@ import { sendQuestion } from "./actions";
 const placeHolders = {
   teacher: "מה תפקידו של המורה?",
   engineer: "מה תפקידו של המהנדס?",
-  webasics: "מתי מתחילה הסדנה?",
+  webasics: "איפה הסדנה מתקיימת?",
 };
 
 export default function AskAi() {
@@ -69,6 +69,7 @@ export default function AskAi() {
             id="char-engineer"
             className="appearance-none peer/e hidden"
             onChange={roleChange}
+            required
           />
           <label
             htmlFor="char-engineer"

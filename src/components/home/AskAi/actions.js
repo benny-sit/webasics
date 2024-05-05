@@ -51,6 +51,10 @@ export async function sendQuestion(formData) {
   const context = role in roleToContext ? roleToContext[role] : "";
   console.log(formData, question, role);
 
+  if (!context || !question) {
+    return { answer: "אנא שאל.י שאלה", score: 1 };
+  }
+
   const inference = new HfInference(process.env.HF_TOKEN);
 
   try {
