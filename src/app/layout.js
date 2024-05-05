@@ -28,6 +28,9 @@ export const metadata = {
     "Web basics courses",
     "learn web and ai",
   ],
+  openGraph: {
+    type: "image/png",
+  },
 };
 
 export default function RootLayout({ children }) {
