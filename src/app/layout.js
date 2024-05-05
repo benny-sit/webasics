@@ -1,5 +1,6 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
+import ogImage from "./opengraph-image.png";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -28,8 +29,24 @@ export const metadata = {
     "Web basics courses",
     "learn web and ai",
   ],
+  metadataBase: new URL("https://webasics.vercel.app"),
   openGraph: {
-    type: "image/png",
+    images: [
+      {
+        url: ogImage.src,
+        width: ogImage.width,
+        height: ogImage.height,
+      },
+    ],
+  },
+  twitter: {
+    images: [
+      {
+        url: ogImage.src,
+        width: ogImage.width,
+        height: ogImage.height,
+      },
+    ],
   },
 };
 
