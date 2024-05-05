@@ -29,7 +29,7 @@ export const metadata = {
     "Web basics courses",
     "learn web and ai",
   ],
-  metadataBase: new URL("https://webasics.vercel.app"),
+  metadataBase: new URL(process.env.DEPLOY_URL),
   openGraph: {
     images: [
       {
