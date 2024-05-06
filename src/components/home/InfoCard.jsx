@@ -18,7 +18,7 @@ export default function InfoCard({ icon, iconHeight = 113, children }) {
           alt="card icon"
           className={`sm:w-[97px] w-20 md:mt-4 sm:mt-2`}
         />
-        <p className="text-xl sm:text-2xl mt-2 sm:mt-4 md:mt-8 sm:leading-normal">
+        <p className="min-[450px]:text-xl sm:text-2xl mt-2 sm:mt-4 md:mt-8 sm:leading-normal">
           {children}
         </p>
         <div className="w-[80%] sm:w-full self-end h-[2px] bg-w-cream mx-auto mt-auto"></div>
