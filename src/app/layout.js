@@ -64,7 +64,7 @@ window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 
-gtag('config', 'G-J70ZV84QCF');
+gtag('config', '${process.env.NEXT_PUBLIC_GTAG_ID || ""}');
 `}
       </Script>
       <body className={`${openSans.variable} ${oswald.variable}`}>
