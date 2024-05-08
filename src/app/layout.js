@@ -6,6 +6,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 //👇 Import Open Sans font
 import { Open_Sans, Oswald } from "next/font/google";
+import Script from "next/script";
 
 //👇 Configure our font object
 const openSans = Open_Sans({
@@ -53,6 +54,19 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <Script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-J70ZV84QCF"
+      ></Script>
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-J70ZV84QCF');
+`}
+      </Script>
       <body className={`${openSans.variable} ${oswald.variable}`}>
         {children}
       </body>
