@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import HeaderContactBtn from "./HeaderContactBtn";
 
 const REGISTRATION_URL = process.env.NEXT_PUBLIC_REGISTRATION_URL;
 
@@ -24,9 +25,7 @@ export default function Header() {
             </Link>
           </li>
           <li>
-            <Link href={REGISTRATION_URL} className="link-style">
-              צור קשר
-            </Link>
+            <HeaderContactBtn />
           </li>
         </ul>
       </nav>

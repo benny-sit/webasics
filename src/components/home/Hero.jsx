@@ -1,7 +1,6 @@
 import Image from "next/image";
 import React from "react";
-
-const REGISTRATION_URL = process.env.NEXT_PUBLIC_REGISTRATION_URL;
+import HeroButton from "./HeroButton";
 
 export default function Hero() {
   return (
@@ -18,17 +17,7 @@ export default function Hero() {
         <p className="text-[#868686] mt-1">
           תוכנית ייחודית וחדשנית, מספר המקומות מוגבל
         </p>
-        <div className="w-full max-w-[290px] mt-4 relative group/cta">
-          <div className="absolute inset-0 bg-w-blue rounded-xl"></div>
-          <div className="absolute inset-0 bg-w-red rounded-xl group-hover/cta:-translate-x-1 group-hover/cta:-translate-y-1 transition-transform"></div>
-          <a
-            target="_blank"
-            href={REGISTRATION_URL}
-            className="relative inline-block text-center rounded-[11px] max-w-[290px] w-full bg-w-cream-light py-4 text-xl active:bg-w-cream   group-hover/cta:-translate-x-2 group-hover/cta:-translate-y-2 transition-transform ease-out"
-          >
-            <span>להרשמה</span>
-          </a>
-        </div>
+        <HeroButton />
       </div>
       <div className="w-full flex justify-center">
         <div className="aspect-[575/715] max-w-[390px] md:max-w-[575px] w-full relative">
